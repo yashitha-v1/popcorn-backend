@@ -1,11 +1,13 @@
 const mongoose = require("mongoose");
 
-const movieSchema = new mongoose.Schema({
-    tmdbId: { type: Number, unique: true },
+const MovieSchema = new mongoose.Schema({
+    tmdbId: Number,
     title: String,
     poster: String,
     rating: Number,
-    overview: String
+    overview: String,
+    language: String,
+    releaseDate: String
 });
 
-module.exports = mongoose.model("Movie", movieSchema);
+module.exports = mongoose.model("Movie", MovieSchema);
